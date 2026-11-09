@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: gatinho-live
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: TIKTOK_USER
+        sync: false
+      - key: SIGN_API_KEY
+        sync: false
